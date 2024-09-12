@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dashboard-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 1.5rem;
+        }
+        .dashboard-list {
+            list-style: none;
+            padding: 0;
+        }
+        .dashboard-list li {
+            margin-bottom: 1rem;
+        }
+        .dashboard-list a {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+        .dashboard-list a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Bienvenido al Menú</h1>
+        <ul class="dashboard-list">
+            <li><a href="{% url 'lista_eventos' %}">Lista de Eventos</a></li>
+            <li><a href="{% url 'crear_evento' %}">Crear Evento</a></li>
+            <li><a href="{% url 'lista_organizadores' %}">Lista de Organizadores</a></li>
+            <li><a href="{% url 'crear_organizador' %}">Crear Organizador</a></li>
+        </ul>
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
